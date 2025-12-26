@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Sinai AG Church | Khalanga Salyan</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+  margin:0;
+  font-family:Segoe UI, Arial, sans-serif;
+  background:#f4f6f8;
+  color:#333;
+}
+header{
+  background:linear-gradient(135deg,#2c3e50,#1abc9c);
+  color:white;
+  text-align:center;
+  padding:35px 20px;
+}
+nav{
+  background:#34495e;
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+nav button{
+  background:none;
+  border:none;
+  color:white;
+  padding:14px 18px;
+  font-size:15px;
+  cursor:pointer;
+}
+nav button:hover{
+  background:#1abc9c;
+}
+section{
+  display:none;
+  background:white;
+  margin:25px auto;
+  padding:25px;
+  max-width:900px;
+  border-radius:12px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+section.active{
+  display:block;
+}
+h2{
+  color:#2c3e50;
+}
+.badge{
+  display:inline-block;
+  background:#1abc9c;
+  color:white;
+  padding:8px 16px;
+  border-radius:20px;
+  margin-top:10px;
+}
+.lang-switch{
+  margin-top:10px;
+}
+.lang-switch button{
+  background:white;
+  color:#2c3e50;
+  border:none;
+  padding:6px 12px;
+  margin:3px;
+  border-radius:6px;
+  cursor:pointer;
+}
+input, textarea{
+  width:100%;
+  padding:10px;
+  margin-top:8px;
+  margin-bottom:15px;
+  border-radius:6px;
+  border:1px solid #ccc;
+}
+.submit-btn{
+  background:#1abc9c;
+  color:white;
+  border:none;
+  padding:10px 18px;
+  border-radius:8px;
+  cursor:pointer;
+}
+.wishes{
+  background:#ecf9f7;
+  border-left:5px solid #1abc9c;
+  padding:15px;
+  margin-top:20px;
+  border-radius:8px;
+  text-align:center;
+  font-style:italic;
+}
+.hero-img{
+  width:100%;
+  max-width:500px;
+  margin:20px auto;
+  display:block;
+  border-radius:14px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.3);
+}
+footer{
+  background:#2c3e50;
+  color:white;
+  text-align:center;
+  padding:18px;
+  margin-top:30px;
+}
+</style>
+
+<script>
+function showPage(id){
+  document.querySelectorAll("section").forEach(s=>s.classList.remove("active"));
+  document.getElementById(id).classList.add("active");
+}
+
+function setLang(lang){
+  document.querySelectorAll("[data-en]").forEach(el=>{
+    el.innerText = el.getAttribute("data-"+lang);
+  });
+}
+</script>
+</head>
+
+<body>
+
+<header>
+  <h1>SINAI AG CHURCH</h1>
+  <p data-en="Khalanga, Salyan" data-ne="खलंगा, सल्यान">Khalanga, Salyan</p>
+  <p data-en="Worship • Word • Fellowship" data-ne="आराधना • वचन • संगति"></p>
+
+  <div class="lang-switch">
+    <button onclick="setLang('en')">English</button>
+    <button onclick="setLang('ne')">नेपाली</button>
+  </div>
+</header>
+
+<nav>
+  <button onclick="showPage('home')">Home</button>
+  <button onclick="showPage('about')">About</button>
+  <button onclick="showPage('fellowship')">Fellowship</button>
+  <button onclick="showPage('leaders')">Leaders</button>
+  <button onclick="showPage('prayer')">Prayer</button>
+  <button onclick="showPage('bible')">Bible</button>
+</nav>
+
+<!-- HOME -->
+<section id="home" class="active">
+  <h2 data-en="Welcome to Sinai AG Church" data-ne="Sinai AG Church मा तपाईंलाई स्वागत छ"></h2>
+  <p data-en="A Christ-centered church where believers gather to worship and grow together."
+     data-ne="यो ख्रीष्ट-केन्द्रित चर्च हो जहाँ विश्वासिहरू आराधना र आत्मिक वृद्धिका लागि भेला हुन्छन्।"></p>
+  <div class="badge" data-en="Every Saturday • 11:00 AM"
+       data-ne="हरेक शनिबार • बिहान ११:०० बजे"></div>
+  <img src="cross.jpg" alt="The Cross of Jesus Christ" class="hero-img">
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <h2 data-en="About Our Church" data-ne="हाम्रो चर्च बारे"></h2>
+  <p data-en="Sinai AG Church is located in Khalanga, Salyan. Our mission is to spread God's Word and serve with love."
+     data-ne="Sinai AG Church खलंगा, सल्यानमा अवस्थित छ। हाम्रो उद्देश्य परमेश्वरको वचन प्रचार गर्नु र प्रेमसाथ सेवा गर्नु हो।"></p>
+</section>
+
+<!-- FELLOWSHIP -->
+<section id="fellowship">
+  <h2 data-en="Fellowship & Ministries" data-ne="संगति तथा सेवकाइ"></h2>
+  <p data-en="Fellowship Time: Every Saturday at 11:00 AM"
+     data-ne="संगति समय: हरेक शनिबार बिहान ११:०० बजे"></p>
+  <ul>
+    <li>Prayer & Worship</li>
+    <li>Bible Teaching</li>
+    <li>Child Fellowship</li>
+    <li>Youths Group</li>
+    <li><strong>Women Fellowship</strong></li>
+  </ul>
+</section>
+
+<!-- LEADERS -->
+<section id="leaders">
+  <h2 data-en="Church Leadership" data-ne="चर्च नेतृत्व"></h2>
+  <ul>
+    <li>Pastor Rebrent Janga Bahadur WOD</li>
+    <li>Pastor Chitra WOD</li>
+    <li>Paul: Gebi Roka</li>
+    <li>Worship Leader: Renu Nepali</li>
+    <li>Cashier: Chandra BK</li>
+  </ul>
+</section>
+
+<!-- PRAYER -->
+<section id="prayer">
+  <h2 data-en="Prayer Request" data-ne="प्रार्थना अनुरोध"></h2>
+  <p data-en="Submit your prayer request. We will pray for you."
+     data-ne="तपाईंको प्रार्थना अनुरोध पठाउनुहोस्। हामी तपाईंको लागि प्रार्थना गर्नेछौं।"></p>
+
+  <form>
+    <input type="text" placeholder="Your name">
+    <textarea rows="4" placeholder="Write your prayer request"></textarea>
+    <button class="submit-btn" type="button"
+      onclick="alert('Prayer request submitted. God bless you!')">
+      Submit
+    </button>
+  </form>
+
+  <div class="wishes"
+       data-en="May God’s Word guide your life and fill your heart with peace."
+       data-ne="परमेश्वरको वचनले तपाईंको जीवनलाई मार्गदर्शन गरोस् र तपाईंको हृदय शान्तिले भरियोस्।">
+  </div>
+</section>
+
+<!-- BIBLE -->
+<section id="bible">
+  <h2 data-en="Bible Verses" data-ne="बाइबल पदहरू"></h2>
+  <p data-en="Your word is a lamp to my feet and a light to my path. (Psalm 119:105)"
+     data-ne="तपाईंको वचन मेरो पाउको लागि दीपक र मेरो बाटोको लागि उज्यालो हो। (भजन 119:105)"></p>
+  <p data-en="I can do all things through Christ who strengthens me. (Philippians 4:13)"
+     data-ne="मलाई शक्ति दिनुहुने ख्रीष्टद्वारा म सबै कुरा गर्न सक्छु। (फिलिप्पी 4:13)"></p>
+  <p data-en="The Lord is my shepherd; I shall not want. (Psalm 23:1)"
+     data-ne="परमप्रभु मेरो गोठालो हुनुहुन्छ; मलाई कुनै कुराको कमी हुनेछैन। (भजन 23:1)"></p>
+  <p data-en="For God so loved the world that He gave His one and only Son. (John 3:16)"
+     data-ne="किनकि परमेश्वरले संसारलाई यति प्रेम गर्नुभयो कि उहाँले आफ्नो एकमात्र पुत्र दिनुभयो। (यूहन्ना 3:16)"></p>
+  <div class="wishes"
+       data-en="May God’s Word guide your life and fill your heart with peace."
+       data-ne="परमेश्वरको वचनले तपाईंको जीवनलाई मार्गदर्शन गरोस् र तपाईंको हृदय शान्तिले भरियोस्।">
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 Sinai AG Church | Khalanga, Salyan</p>
+  <p data-en="Thank you for visiting. God bless you!"
+     data-ne="भ्रमण गर्नु भएकोमा धन्यवाद। परमेश्वरले तपाईंलाई आशिष् दिनुहोस्!"></p>
+</footer>
+
+</body>
+</html>
