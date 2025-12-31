@@ -183,7 +183,7 @@ function setLang(lang){
 <section id="leaders">
   <h2 data-en="Church Leadership" data-ne="चर्च नेतृत्व"></h2>
   <ul>
-    <li>Pastor Rebrent Janga Bahadur WOD</li>
+    <li> Rebrend Pastor Janga Bahadur WOD</li>
     <li>Pastor Chitra WOD</li>
     <li>Paul: Gebi Roka</li>
     <li>Worship Leader: Renu Nepali</li>
